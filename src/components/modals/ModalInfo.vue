@@ -15,6 +15,7 @@
       <div class="meta-modal__point-title">Owner</div>
       <a
           :href="`https://basescan.org/address/${item.seed.owner}`"
+          target="_blank"
           class="meta-modal__point-value"
       >
         {{ shortAddress(item.seed.owner) }}
