@@ -10,7 +10,7 @@
       <div class="inscription-list__item-info">
         <div class="inscription-list__item-title">
           {{ inscription.seed.isDynamic ? 'Dynamic Fungi' : 'Stable Fungi' }}
-          <NumberText>{{ inscription.seed.seed }}</NumberText>
+          {{formatNumberWithComma(inscription.seed.seed)}}
         </div>
 
         <a
@@ -36,6 +36,7 @@
 
 <script setup>
 import { useLayoutStore } from '@/stores'
+import { formatNumberWithComma } from '@/utils/number'
 
 defineProps({
   isLoading: {
