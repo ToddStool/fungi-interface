@@ -34,6 +34,7 @@
           v-if="isLoading || inscriptions.length"
           :inscriptions="inscriptions"
           :is-loading="isLoading"
+          :key="currentOption.id + inscriptions.length"
           class="page__list"
       />
 
